@@ -18,6 +18,5 @@ for i in range(n):
 
 print(f'Число {x} встречается в списке А {count} раз.')
 
-# result = [i for i in range(n) if nums[i] == x]
-# print(f'Число {x} встречается в списке А {result} раз.')
-# попробовал через генератор решить, выводиться индекс числа, в чём загвоздка?
+result = [i for i in range(n) if nums[i] == x]
+print(f'Число {x} встречается в списке А {len(result)} раз.')
