@@ -6,6 +6,7 @@
 #     1 2 3 4 5
 #     3
 #     -> 1
+from random import randint
 
 n = int(input('количество элементов в массиве: '))
 nums = list(map(int, input('Введите список через пробел: ').split(' ')))
@@ -20,3 +21,16 @@ print(f'Число {x} встречается в списке А {count} раз.
 
 result = [i for i in range(n) if nums[i] == x]
 print(f'Число {x} встречается в списке А {len(result)} раз.')
+
+
+# решение преподавателя 
+len_nums = int(input('Enter list length: '))
+nums = [randint(1, 100) for i in range(len_nums)]
+print("List: ", *nums)
+x = int(input('Enter x: '))
+
+# easy
+print(f'{x} finds in list {nums.count(x)} times')
+
+# hard
+print(f'{x} finds in list {len([i for i in nums if i == x])} times')
